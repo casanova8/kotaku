@@ -31,11 +31,10 @@
             <div class="panel-body">
                 <div class="row">
                     <div class="col-xs-12">
-                        <form action="{{ route('login') }}" id="authentication" method="post" class="login_validator">
-                            {{ csrf_field() }}
+                        <form action="{{url('index')}}" id="authentication" method="post" class="login_validator">
                             <div class="form-group">
                                 <label for="email" class="sr-only"> E-mail</label>
-                                <input type="text" class="form-control  form-control-lg" id="email" name="email"
+                                <input type="text" class="form-control  form-control-lg" id="email" name="username"
                                        placeholder="E-mail">
                             </div>
                             <div class="form-group">
@@ -45,7 +44,7 @@
                             </div>
                             <div class="form-group checkbox">
                                 <label for="remember">
-                                    <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>&nbsp; Remember Me
+                                    <input type="checkbox" name="remember" id="remember">&nbsp; Remember Me
                                 </label>
                             </div>
                             <div class="form-group">
